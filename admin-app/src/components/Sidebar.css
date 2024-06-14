@@ -1,0 +1,75 @@
+/* Sidebar.css */
+
+.sidebar {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  left: -250px; /* Start off-screen */
+  top: 0;
+  background-color: #ffffff; /* Light background */
+  border-right: 1px solid #ccc;
+  padding: 20px;
+  transition: left 0.3s ease, background-color 0.3s ease;
+  z-index: 1000; /* Ensure sidebar is above other content */
+}
+
+.sidebar.open {
+  left: 0; /* Slide into view */
+}
+
+.sidebar.dark {
+  background-color: #333333; /* Dark background */
+  color: #ffffff; /* Light text for dark background */
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-links li {
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 8px;
+  background-color: transparent;
+  color: #333333; /* Dark text for links */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-links li:hover {
+  background-color: #f0f0f0; /* Lighter background on hover */
+}
+
+.mode-toggle {
+  cursor: pointer;
+  padding: 8px 16px;
+  background-color: #eeeeee; /* Light background for toggle */
+  border-radius: 20px;
+  font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth color transition */
+}
+
+.mode-toggle:hover {
+  background-color: #dddddd; /* Darken background on hover */
+  color: #333333; /* Darken text color on hover */
+}
+
+.toggle-button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.toggle-button:hover {
+  background-color: #0056b3;
+}
