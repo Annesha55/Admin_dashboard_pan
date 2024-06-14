@@ -1,10 +1,14 @@
 import React from 'react';
 import './Register.css';
 
-const Register = () => {
+const Register = ({ navigateTo }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
+    // Handle registration logic here if needed
+  };
+
+  const handleLoginClick = () => {
+    navigateTo('login'); // Call navigateTo function passed as prop
   };
 
   return (
@@ -16,19 +20,16 @@ const Register = () => {
           <input type="text" id="username" name="username" required />
         </div>
         <div className="input-group">
-          <label htmlFor="email">Email</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-        <div className="input-group">
           <label htmlFor="password">Password</label>
           <input type="password" id="password" name="password" required />
         </div>
         <div className="input-group">
-          <label htmlFor="confirm-password">Confirm Password</label>
-          <input type="password" id="confirm-password" name="confirm-password" required />
+          <label htmlFor="confirmPassword">Confirm Password</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" required />
         </div>
         <button type="submit">Register</button>
       </form>
+      <p>Already have an account? <span className="login-link" onClick={handleLoginClick}>Login here</span></p>
     </div>
   );
 }

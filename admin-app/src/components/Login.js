@@ -1,19 +1,18 @@
 import React from 'react';
 import './Login.css';
 
-const Login = ({ navigateTo }) => { // Destructure navigateTo from props
+const Login = ({ navigateTo, darkMode }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle login logic here if needed
+ 
   };
 
   const handleRegisterClick = () => {
-    // Navigate to register page using navigateTo prop
     navigateTo('register');
   };
 
   return (
-    <div className="login-container">
+    <div className={`login-container ${darkMode ? 'dark' : 'light'}`}>
       <form className="login-form" onSubmit={handleSubmit}>
         <h2>Login</h2>
         <div className="input-group">
@@ -25,8 +24,8 @@ const Login = ({ navigateTo }) => { // Destructure navigateTo from props
           <input type="password" id="password" name="password" required />
         </div>
         <button type="submit">Login</button>
+        <p>Don't have an account? <span className="register-link" onClick={handleRegisterClick}>Register here</span></p>
       </form>
-      <p>Don't have an account? <span className="register-link" onClick={handleRegisterClick}>Register here</span></p>
     </div>
   );
 }

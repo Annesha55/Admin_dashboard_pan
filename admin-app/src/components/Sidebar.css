@@ -1,75 +1,98 @@
 /* Sidebar.css */
 
+/* Dark mode variables */
+:root {
+  --sidebar-bg-color: #2c2c2c;
+  --sidebar-text-color: #fff;
+  --sidebar-hover-color: #444;
+  --sidebar-header-bg-color: #1c1c1c;
+  --logout-btn-bg-color: #ff4081;
+  --logout-btn-hover-color: #ff80ab;
+}
+
+/* Light mode variables */
+.sidebar.light {
+  --sidebar-bg-color: #f0f0f0;
+  --sidebar-text-color: #333;
+  --sidebar-hover-color: #ddd;
+  --sidebar-header-bg-color: #ccc;
+  --logout-btn-bg-color: #007bff; /* Blue color */
+  --logout-btn-hover-color: #0056b3;
+}
+
+/* Common sidebar styles */
 .sidebar {
   width: 250px;
-  height: 100%;
+  height: 100vh;
   position: fixed;
-  left: -250px; /* Start off-screen */
   top: 0;
-  background-color: #ffffff; /* Light background */
-  border-right: 1px solid #ccc;
-  padding: 20px;
-  transition: left 0.3s ease, background-color 0.3s ease;
-  z-index: 1000; /* Ensure sidebar is above other content */
+  left: -250px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--sidebar-bg-color);
+  color: var(--sidebar-text-color);
 }
 
 .sidebar.open {
-  left: 0; /* Slide into view */
+  left: 0;
 }
 
-.sidebar.dark {
-  background-color: #333333; /* Dark background */
-  color: #ffffff; /* Light text for dark background */
-}
-
-.sidebar-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.sidebar-links {
-  list-style: none;
+.sidebar-close-button {
+  background: none;
+  border: none;
+  color: var(--sidebar-text-color);
+  font-size: 20px;
+  cursor: pointer;
+  align-self: flex-end;
+  margin: 10px;
   padding: 0;
 }
 
-.sidebar-links li {
-  margin-bottom: 10px;
+.sidebar-header {
+  text-align: center;
+  padding: 20px 0;
+  background-color: var(--sidebar-header-bg-color);
+  font-size: 18px;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-menu li {
+  padding: 15px 20px;
   cursor: pointer;
-  padding: 8px;
-  background-color: transparent;
-  color: #333333; /* Dark text for links */
-  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
 }
 
-.sidebar-links li:hover {
-  background-color: #f0f0f0; /* Lighter background on hover */
+.sidebar-menu li:hover {
+  background-color: var(--sidebar-hover-color);
 }
 
-.mode-toggle {
-  cursor: pointer;
-  padding: 8px 16px;
-  background-color: #eeeeee; /* Light background for toggle */
-  border-radius: 20px;
-  font-size: 14px;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth color transition */
+.sidebar-menu li span {
+  margin-left: 10px;
 }
 
-.mode-toggle:hover {
-  background-color: #dddddd; /* Darken background on hover */
-  color: #333333; /* Darken text color on hover */
-}
-
-.toggle-button {
-  background-color: #007bff;
-  color: #ffffff;
+.sidebar .logout {
+  background-color: var(--logout-btn-bg-color);
+  color: #fff;
   border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
+  padding: 15px;
   cursor: pointer;
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
 }
 
-.toggle-button:hover {
-  background-color: #0056b3;
+.sidebar .logout:hover {
+  background-color: var(--logout-btn-hover-color);
 }

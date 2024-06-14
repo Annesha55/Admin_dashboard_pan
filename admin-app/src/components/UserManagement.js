@@ -1,5 +1,5 @@
 import React from 'react';
-import './UserManagement.css'; // Import your CSS file for styling
+import './Dashboard'; // Import your CSS file for styling
 
 const UserManagement = ({ darkMode }) => {
   // Sample data for Active and Disabled Users

@@ -1,17 +1,19 @@
-// App.js
-
 import React, { useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
-import Profile from './components/Profile';
-import UserManagement from './components/UserManagement';
+
+
 import Settings from './components/Settings';
+import Dashboard from './components/Dashboard';
+import Attendance from './components/Attendence';
+import Projects from './components/Projects'; // Import Projects component
+import Sites from './components/Sites'; // Import Sites component
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const [currentPage, setCurrentPage] = useState('home'); // Default to 'home' page
+  const [currentPage, setCurrentPage] = useState('dashboard'); // Default to 'dashboard' page
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -23,6 +25,7 @@ const App = () => {
 
   const navigateTo = (page) => {
     setCurrentPage(page);
+    setIsOpen(false); // Close sidebar after navigation
   };
 
   return (
@@ -30,9 +33,10 @@ const App = () => {
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} toggleSidebar={toggleSidebar} />
       <div className="content">
         {/* Conditional rendering based on currentPage */}
-        {currentPage === 'home' && <h1>Home Page Content</h1>}
-        {currentPage === 'profile' && <Profile darkMode={darkMode} />}
-        {currentPage === 'user-management' && <UserManagement darkMode={darkMode} />}
+        {currentPage === 'dashboard' && <Dashboard darkMode={darkMode} />}
+        {currentPage === 'attendance' && <Attendance darkMode={darkMode} />}
+        {currentPage === 'projects' && <Projects darkMode={darkMode} />}
+        {currentPage === 'sites' && <Sites darkMode={darkMode} />}
         {currentPage === 'settings' && <Settings darkMode={darkMode} />}
         {/* Add more pages as needed */}
       </div>
@@ -42,7 +46,6 @@ const App = () => {
         navigateTo={navigateTo}
         isOpen={isOpen}
         toggleSidebar={toggleSidebar}
-        // Add other props as needed
       />
     </div>
   );

@@ -1,36 +1,45 @@
-// Sidebar.js
-
 import React from 'react';
 import './Sidebar.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTachometerAlt, faUserCheck, faUsers, faBuilding, faProjectDiagram, faCog, faTimes } from '@fortawesome/free-solid-svg-icons';
 
-const Sidebar = ({ darkMode, toggleDarkMode, navigateTo, isOpen, toggleSidebar }) => {
-  const handleModeToggle = () => {
-    toggleDarkMode();
-  };
-
-  const handleNavigateTo = (page) => {
-    navigateTo(page);
-    toggleSidebar(); // Close sidebar after navigation
-  };
-
+const Sidebar = ({ isOpen, toggleSidebar, navigateTo }) => {
   return (
-    <div className={`sidebar ${isOpen ? 'open' : ''} ${darkMode ? 'dark' : 'light'}`}>
+    <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
+      <button className="sidebar-close-button" onClick={toggleSidebar}>
+        <FontAwesomeIcon icon={faTimes} />
+      </button>
       <div className="sidebar-header">
-        <h3>Sidebar</h3>
-        <button className="toggle-button" onClick={toggleSidebar}>
-          {isOpen ? 'Close' : 'Open'}
-        </button>
+        <h2>Farmer's App</h2>
       </div>
-      <ul className="sidebar-links">
-        <li onClick={() => handleNavigateTo('profile')}>Profile</li>
-        <li onClick={() => handleNavigateTo('user-management')}>User Management</li>
-        <li onClick={() => handleNavigateTo('settings')}>Settings</li>
-        <li onClick={() => handleNavigateTo('logout')}>Logout</li>
+      <ul className="sidebar-menu">
+        <li onClick={() => navigateTo('dashboard')}>
+          <FontAwesomeIcon icon={faTachometerAlt} />
+          <span>Dashboard</span>
+        </li>
+        <li onClick={() => navigateTo('attendance')}>
+          <FontAwesomeIcon icon={faUserCheck} />
+          <span>Attendance</span>
+        </li>
+        <li onClick={() => navigateTo('projects')}>
+          <FontAwesomeIcon icon={faProjectDiagram} />
+          <span>Projects</span>
+        </li>
+        <li onClick={() => navigateTo('sites')}>
+          <FontAwesomeIcon icon={faBuilding} />
+          <span>Sites</span>
+        </li>
+        <li onClick={() => navigateTo('users')}>
+          <FontAwesomeIcon icon={faUsers} />
+          <span>Users</span>
+        </li>
+        <li onClick={() => navigateTo('settings')}>
+          <FontAwesomeIcon icon={faCog} />
+          <span>Settings</span>
+        </li>
       </ul>
-      <div className="mode-toggle" onClick={handleModeToggle}>
-        {darkMode ? 'Light Mode' : 'Dark Mode'}
-      </div>
-    </div>
+      <button className="logout" onClick={() => navigateTo('logout')}>Logout</button>
+    </aside>
   );
 }
 

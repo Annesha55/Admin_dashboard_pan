@@ -1,33 +1,32 @@
 /* styles.css */
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
-  }
-  
-  .App {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-  }
-  
-  .App.light {
-    background-color: #ffffff; /* Light background color */
-    color: #333333; /* Dark text for light background */
-  }
-  
-  .App.dark {
-    background-color: #333333; /* Dark background color */
-    color: #ffffff; /* Light text for dark background */
-  }
-  
-  .content {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.App.light {
+  background-color: #ffffff; /* Light background color */
+  color: #333333; /* Dark text for light background */
+}
+
+.App.dark {
+  background-color: #333333; /* Dark background color */
+  color: #ffffff; /* Light text for dark background */
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}

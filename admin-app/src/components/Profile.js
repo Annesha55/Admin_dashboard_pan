@@ -1,4 +1,3 @@
-// Profile.js
 
 import React from 'react';
 import './Profile.css'; // Import your CSS file for styling
