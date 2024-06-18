@@ -61,3 +61,24 @@ ul {
 .mode-toggle:hover {
   opacity: 0.7;
 }
+/* App.css */
+:root {
+  --dashboard-bg-light: #ffffff;
+  --dashboard-bg-dark: #333333;
+  --text-color-light: #333333;
+  --text-color-dark: #ffffff;
+  --card-border-light: #ccc;
+  --card-border-dark: #555;
+}
+
+.App.light {
+  --dashboard-bg: var(--dashboard-bg-light);
+  --text-color: var(--text-color-light);
+  --card-border: var(--card-border-light);
+}
+
+.App.dark {
+  --dashboard-bg: var(--dashboard-bg-dark);
+  --text-color: var(--text-color-dark);
+  --card-border: var(--card-border-dark);
+}

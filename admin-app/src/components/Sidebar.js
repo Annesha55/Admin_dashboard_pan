@@ -1,16 +1,17 @@
+// Sidebar.js
 import React from 'react';
 import './Sidebar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTachometerAlt, faUserCheck, faUsers, faBuilding, faProjectDiagram, faCog, faTimes } from '@fortawesome/free-solid-svg-icons';
 
-const Sidebar = ({ isOpen, toggleSidebar, navigateTo }) => {
+const Sidebar = ({ darkMode, isOpen, toggleSidebar, navigateTo }) => {
   return (
-    <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
+    <aside className={`sidebar ${isOpen ? 'open' : ''} ${darkMode ? 'dark' : 'light'}`}>
       <button className="sidebar-close-button" onClick={toggleSidebar}>
         <FontAwesomeIcon icon={faTimes} />
       </button>
       <div className="sidebar-header">
-        <h2>Farmer's App</h2>
+        <h2>Farmers App</h2>
       </div>
       <ul className="sidebar-menu">
         <li onClick={() => navigateTo('dashboard')}>
@@ -38,7 +39,7 @@ const Sidebar = ({ isOpen, toggleSidebar, navigateTo }) => {
           <span>Settings</span>
         </li>
       </ul>
-      <button className="logout" onClick={() => navigateTo('logout')}>Logout</button>
+      <button className="logout" onClick={() => navigateTo('login')}>Logout</button>
     </aside>
   );
 }

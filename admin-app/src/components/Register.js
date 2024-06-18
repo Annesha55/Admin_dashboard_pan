@@ -1,35 +1,64 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Register.css';
 
 const Register = ({ navigateTo }) => {
-  const handleSubmit = (e) => {
+  const [fullName, setFullName] = useState('');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleRegister = (e) => {
     e.preventDefault();
-    // Handle registration logic here if needed
+    const isSuccess = true;
+    if (isSuccess) {
+      // Navigate to the dashboard after successful registration
+      navigateTo('dashboard');
+    }
   };
 
-  const handleLoginClick = () => {
-    navigateTo('login'); // Call navigateTo function passed as prop
-  };
+   
+
 
   return (
     <div className="register-container">
-      <form className="register-form" onSubmit={handleSubmit}>
+      <div className="register-box">
         <h2>Register</h2>
-        <div className="input-group">
-          <label htmlFor="username">Username</label>
-          <input type="text" id="username" name="username" required />
-        </div>
-        <div className="input-group">
-          <label htmlFor="password">Password</label>
-          <input type="password" id="password" name="password" required />
-        </div>
-        <div className="input-group">
-          <label htmlFor="confirmPassword">Confirm Password</label>
-          <input type="password" id="confirmPassword" name="confirmPassword" required />
-        </div>
-        <button type="submit">Register</button>
-      </form>
-      <p>Already have an account? <span className="login-link" onClick={handleLoginClick}>Login here</span></p>
+        <form onSubmit={handleRegister}>
+          <div className="form-group">
+            <label htmlFor="fullName">Full Name</label>
+            <input
+              type="text"
+              id="fullName"
+              value={fullName}
+              onChange={(e) => setFullName(e.target.value)}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          <button type="submit" className="register-button">Register</button>
+        </form>
+        <p className="login-prompt">
+          Already have an account? <span className="login-link" onClick={() => navigateTo('login')}>Login here</span>
+        </p>
+      </div>
     </div>
   );
 }

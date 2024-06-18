@@ -1,13 +1,12 @@
-// Logout.js
+
 
 import React from 'react';
-import './Logout.css'; // Import your CSS file for styling
+import './Logout.css';
 
 const Logout = () => {
-  // Function to handle logout action (for demonstration)
+
   const handleLogout = () => {
-    // Implement your logout logic here (e.g., clear session, redirect to login, etc.)
-    console.log('Logged out'); // For demonstration
+    console.log('Logged out'); 
   };
 
   return (

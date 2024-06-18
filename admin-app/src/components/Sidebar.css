@@ -1,26 +1,26 @@
-/* Sidebar.css */
 
-/* Dark mode variables */
+
+/* Dark mode  */
 :root {
   --sidebar-bg-color: #2c2c2c;
   --sidebar-text-color: #fff;
   --sidebar-hover-color: #444;
-  --sidebar-header-bg-color: #1c1c1c;
-  --logout-btn-bg-color: #ff4081;
-  --logout-btn-hover-color: #ff80ab;
+  --sidebar-header-bg-color: hsl(0, 0%, 11%);
+  --logout-btn-bg-color: #135a12; 
+  --logout-btn-hover-color:#072f0a;
 }
 
-/* Light mode variables */
+/* Light mode  */
 .sidebar.light {
   --sidebar-bg-color: #f0f0f0;
   --sidebar-text-color: #333;
   --sidebar-hover-color: #ddd;
   --sidebar-header-bg-color: #ccc;
-  --logout-btn-bg-color: #007bff; /* Blue color */
-  --logout-btn-hover-color: #0056b3;
+  --logout-btn-bg-color: #17b714; 
+  --logout-btn-hover-color: #118018;
 }
 
-/* Common sidebar styles */
+
 .sidebar {
   width: 250px;
   height: 100vh;

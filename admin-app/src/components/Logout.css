@@ -21,15 +21,15 @@
   
   .logout-content button {
     padding: 10px 20px;
-    background-color: #f44336;
+    background-color: #000000;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
   
   .logout-content button:hover {
-    background-color: #c62828;
+    background-color: #000000;
   }
   

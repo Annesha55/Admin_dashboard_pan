@@ -1,4 +1,4 @@
-/* Register.css */
+
 
 .register-container {
     display: flex;
@@ -49,6 +49,13 @@
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+  }
+  
+
+  .login-link {
+    color: #007bff; /* Blue color for the link */
+    cursor: pointer;
+    text-decoration: underline;
   }
   
   button[type="submit"]:hover {

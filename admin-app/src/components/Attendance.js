@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Attendence.css';
+import './Attendance.css';
 
 const Attendance = () => {
   const [activityData, setActivityData] = useState([]);

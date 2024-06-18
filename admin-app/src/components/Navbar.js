@@ -1,29 +1,21 @@
-// Navbar.js
 import React from 'react';
 import './Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes, faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = ({ darkMode, toggleDarkMode, sidebarOpen, toggleSidebar }) => {
   return (
     <nav className={`navbar ${darkMode ? 'dark' : 'light'}`}>
-      {sidebarOpen ? (
-        <button className="sidebar-close-button" onClick={toggleSidebar}>
-          <FontAwesomeIcon icon={faTimes} />
+      <div className="navbar-content">
+        <button className="sidebar-toggle-button" onClick={toggleSidebar}>
+          <FontAwesomeIcon icon={sidebarOpen ? faTimes : faBars} />
         </button>
-      ) : (
-        <button className="sidebar-open-button" onClick={toggleSidebar}>
-          <FontAwesomeIcon icon={faBars} />
-        </button>
-      )}
-      <div className="logo">
-        <h1>Farmer's App</h1>
-      </div>
-      <div className="right-section">
-        <div className="dark-mode-toggle">
-          <input type="checkbox" id="darkModeToggle" checked={darkMode} onChange={toggleDarkMode} />
-          <label htmlFor="darkModeToggle">Dark Mode</label>
+        <div className="logo">
+          <h1>Farmers App</h1>
         </div>
+        <button className="dark-mode-toggle" onClick={toggleDarkMode}>
+          <FontAwesomeIcon icon={darkMode ? faSun : faMoon} />
+        </button>
       </div>
     </nav>
   );

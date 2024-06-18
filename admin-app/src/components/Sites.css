@@ -1,14 +1,79 @@
-.sites-container {
-    padding: 20px;
-  }
-  
-  .sites-container.dark {
-    background-color: #333;
-    color: #fff;
-  }
-  
-  .sites-container.light {
-    background-color: #f0f0f0;
-    color: #333;
-  }
-  
+/* Sites.css */
+.sites {
+  padding: 20px;
+}
+
+.sites h2 {
+  margin-bottom: 20px;
+}
+
+.sites-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.sites-table th,
+.sites-table td {
+  padding: 10px;
+  text-align: left;
+}
+
+.sites-table th {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.sites-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.sites-table tbody tr:hover {
+  background-color: #ddd;
+}
+
+/* Dark mode styles */
+.dark .sites-table {
+  color: #fff;
+}
+
+.dark .sites-table th {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark .sites-table td {
+  background-color: #444;
+  border: 1px solid #444;
+}
+
+.dark .sites-table tbody tr:nth-child(even) {
+  background-color: #555;
+}
+
+.dark .sites-table tbody tr:hover {
+  background-color: #666;
+}
+
+/* Light mode styles */
+.light .sites-table {
+  color: #000;
+}
+
+.light .sites-table th {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.light .sites-table td {
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.light .sites-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.light .sites-table tbody tr:hover {
+  background-color: #ddd;
+}

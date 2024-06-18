@@ -1,30 +1,56 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Login.css';
 
-const Login = ({ navigateTo, darkMode }) => {
+const Login = ({ navigateTo }) => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+
   const handleSubmit = (e) => {
     e.preventDefault();
- 
-  };
+    
+    
+    const dummyUsername = 'testuser';
+    const dummyPassword = 'password123';
 
-  const handleRegisterClick = () => {
-    navigateTo('register');
+    
+    if (username === dummyUsername && password === dummyPassword) {
+     
+      navigateTo('dashboard');
+    } else {
+      setError('Invalid credentials. Please try again.');
+    }
   };
 
   return (
-    <div className={`login-container ${darkMode ? 'dark' : 'light'}`}>
+    <div className="login-container">
       <form className="login-form" onSubmit={handleSubmit}>
         <h2>Login</h2>
+        {error && <p className="error-message">{error}</p>}
         <div className="input-group">
           <label htmlFor="username">Username</label>
-          <input type="text" id="username" name="username" required />
+          <input
+            type="text"
+            id="username"
+            name="username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+          />
         </div>
         <div className="input-group">
           <label htmlFor="password">Password</label>
-          <input type="password" id="password" name="password" required />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
         </div>
         <button type="submit">Login</button>
-        <p>Don't have an account? <span className="register-link" onClick={handleRegisterClick}>Register here</span></p>
+        <p>Don't have an account? <span className="register-link" onClick={() => navigateTo('register')}>Register here</span></p>
       </form>
     </div>
   );

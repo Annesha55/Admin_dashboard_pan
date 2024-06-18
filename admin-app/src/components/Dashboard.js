@@ -1,9 +1,9 @@
 import React from 'react';
 import './Dashboard.css'; 
 
-const Dashboard = () => {
+const Dashboard = ({ darkMode }) => {
   return (
-    <div className="dashboard">
+    <div className={`dashboard ${darkMode ? 'dark' : 'light'}`}>
       <div className="card">
         <h3>Data from Users</h3>
         <p>This card will display data collected from users.</p>

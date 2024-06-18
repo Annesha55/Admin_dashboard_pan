@@ -1,23 +1,40 @@
-
-.dashboard {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
+  background-color: var(--dashboard-bg);
+  color: var(--text-color); 
+}
+
+.dashboard.light {
+  --dashboard-bg: #ffffff;
+  --text-color: #333333;
+  --card-border: #ccc;
+}
+
+.dashboard.dark {
+  --dashboard-bg: #333333;
+  --text-color: #ffffff;
+  --card-border: #555;
 }
 
 .card {
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  background-color: #ffffff; /* Set a consistent background color */
+  border: 1px solid var(--card-border);
   border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  width: 80%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.card h3 {
-  margin-bottom: 10px;
-  color: #333;
+.dashboard.dark .card {
+  background-color: #444444;
+  border-color: var(--card-border);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.card p {
-  color: #666;
+.card h3, .card p {
+  margin: 0;
 }
