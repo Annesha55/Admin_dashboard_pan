@@ -1,4 +1,4 @@
-// Settings.js
+
 
 import React from 'react';
 import './Settings.css'; // Import your CSS file for styling
