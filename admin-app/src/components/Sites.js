@@ -1,4 +1,4 @@
-// Sites.js
+
 import React from 'react';
 import './Sites.css';
 
