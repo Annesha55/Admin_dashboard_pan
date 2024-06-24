@@ -1,21 +1,22 @@
 
 
-/* Dark mode  */
+/* Dark mode    background-color: #0f1a14;
+*/
 :root {
-  --sidebar-bg-color: #2c2c2c;
+  --sidebar-bg-color:  #021304;
   --sidebar-text-color: #fff;
-  --sidebar-hover-color: #444;
-  --sidebar-header-bg-color: hsl(0, 0%, 11%);
+  --sidebar-hover-color: #1b3b22;
+  --sidebar-header-bg-color: hsl(127, 33%, 10%);
   --logout-btn-bg-color: #135a12; 
   --logout-btn-hover-color:#072f0a;
 }
 
 /* Light mode  */
 .sidebar.light {
-  --sidebar-bg-color: #f0f0f0;
+  --sidebar-bg-color: #f1faef;
   --sidebar-text-color: #333;
-  --sidebar-hover-color: #ddd;
-  --sidebar-header-bg-color: #ccc;
+  --sidebar-hover-color: #aad2a7;
+  --sidebar-header-bg-color: #dff2d8;
   --logout-btn-bg-color: #17b714; 
   --logout-btn-hover-color: #118018;
 }

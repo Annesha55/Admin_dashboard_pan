@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './Attendance.css';
 
-const Attendance = () => {
+const Attendance = ({ darkMode }) => {
   const [activityData, setActivityData] = useState([]);
 
-  
   useEffect(() => {
-    
     const fetchData = async () => {
-     
       const data = [
         { date: '2024-06-10', users: 15 },
         { date: '2024-06-11', users: 18 },
@@ -25,24 +22,26 @@ const Attendance = () => {
   }, []);
 
   return (
-    <div className="attendance">
-      <h2>User Activity for Last 7 Days</h2>
-      <table className="activity-table">
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Users</th>
-          </tr>
-        </thead>
-        <tbody>
-          {activityData.map((activity) => (
-            <tr key={activity.date}>
-              <td>{activity.date}</td>
-              <td>{activity.users}</td>
+    <div className={`attendance ${darkMode ? 'dark' : 'light'}`}>
+     
+      <div className="table-container">
+        <table className="activity-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Users</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {activityData.map((activity) => (
+              <tr key={activity.date}>
+                <td>{activity.date}</td>
+                <td>{activity.users}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }

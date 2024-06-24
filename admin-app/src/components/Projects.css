@@ -3,12 +3,12 @@
   }
   
   .projects-container.dark {
-    background-color: #333;
+    background-color: #0c1f15;
     color: #fff;
   }
   
   .projects-container.light {
-    background-color: #f0f0f0;
+    background-color: #f1faef;
     color: #333;
   }
   

@@ -1,4 +1,4 @@
-// src/components/Users.js
+
 
 import React, { useState, useEffect } from 'react';
 
@@ -7,7 +7,7 @@ const Users = ({ darkMode }) => {
 
   useEffect(() => {
     // Simulate fetching data
-    const fetchData = async () => {
+    const fetchData = async () => { 
       const data = await fetch('/api/users'); // Replace with actual API call
       const result = await data.json();
       setUsers(result);

@@ -1,56 +1,65 @@
-
-.attendance {
-  padding: 20px;
-}
-
-.activity-table {
+/* Container for the table */
+.table-container {
   width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto; /* Ensure it is scrollable if the content overflows */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+  padding: 20px; /* Add padding to provide space around the table */
 }
 
+/* Styles for the table */
+.activity-table {
+  width: 100%; /* Increase the width to 100% */
+  border-collapse: collapse;
+  margin: 0; /* Remove margin */
+  table-layout: fixed; /* Forces the table to use the specified width */
+}
+
+/* Styles for table headers and cells */
 .activity-table th,
 .activity-table td {
-  padding: 10px;
+  padding: 12px; /* Decreased padding for better spacing */
   text-align: left;
+  border: 1px solid #076131; /* Optional: Add borders to cells */
 }
 
+/* Styles for table headers */
 .activity-table th {
-  background-color: #f0f0f0;
+  background-color: #cae7c0;
   color: #333;
 }
 
+/* Styles for even rows */
 .activity-table tbody tr:nth-child(even) {
-  background-color: #f9f9f9c8;
+  background-color: #f9f9f9;
 }
 
+/* Styles for row hover effect,,, */
 .activity-table tbody tr:hover {
-  background-color: #0e02024f;
+  background-color: #aad2a7;
 }
 
 /* Dark mode styles */
 .dark .activity-table {
-  color: #fff;
+  color: #f4eeee;
 }
 
 .dark .activity-table th {
-  background-color: #333;
+  background-color: #0b230e;
   color: #fff;
 }
 
 .dark .activity-table td {
-  background-color: #444; /* Ensuring td has a background in dark mode */
-  border: 1px solid #444;
+  background-color: #0c2414;
+  border: 1px solid #11371d;
 }
 
 .dark .activity-table tbody tr:nth-child(even) {
-  background-color: #555;
+  background-color: #62c88b;
 }
 
 .dark .activity-table tbody tr:hover {
-  background-color: #666;
-}
-
-.dark .activity-table tbody tr:hover {
-  background-color: #666;
+  background-color: #1b3b22;
 }

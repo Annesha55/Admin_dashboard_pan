@@ -1,84 +1,45 @@
-/* App.css */
 .App {
   font-family: Arial, sans-serif;
   text-align: center;
-  height: 100vh;
+  height: 100vh; 
+  width: 100vw;  
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  overflow: hidden;
+  background-image: linear-gradient(to bottom, #021304, #f1faef); /* Default gradient */
 }
 
-.light {
-  background-color: #f0f0f0;
-  color: #333;
+/* Light mode background */
+.App.light {
+  background-image: linear-gradient(to bottom, #bdecb6, #ffffff); /* Light green gradient */
+  color: var(--text-color-light);
 }
 
-.dark {
-  background-color: #333;
-  color: #f0f0f0;
+/* Dark mode background */
+.App.dark {
+  background-image: linear-gradient(to bottom, #0f2f0e, #021304); /* Dark green gradient */
+  color: var(--text-color-dark);
+}
+
+/* Specify light mode text color */
+.App.light {
+  --text-color: var(--text-color-light);
+}
+
+/* Specify dark mode text color */
+.App.dark {
+  --text-color: var(--text-color-dark);
 }
 
 .content {
-  margin-top: 20px;
   flex: 1;
-  width: 80%;
-  max-width: 600px;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.navbar {
-  background-color: #f0f0f0;
-  padding: 10px;
+  width: 100%; /* Ensure the content takes full width */
+  max-width: 1200px; /* Optional max-width */
   display: flex;
-  justify-content: space-around;
-}
-
-.navbar.dark {
-  background-color: #333;
-  color: #f0f0f0;
-}
-
-.navbar.light {
-  background-color: #f0f0f0;
-  color: #333;
-}
-
-.navbar ul li {
-  display: inline;
-  margin: 0 10px;
-}
-
-.mode-toggle {
-  cursor: pointer;
-  font-size: 20px;
-}
-
-.mode-toggle:hover {
-  opacity: 0.7;
-}
-/* App.css */
-:root {
-  --dashboard-bg-light: #ffffff;
-  --dashboard-bg-dark: #333333;
-  --text-color-light: #333333;
-  --text-color-dark: #ffffff;
-  --card-border-light: #ccc;
-  --card-border-dark: #555;
-}
-
-.App.light {
-  --dashboard-bg: var(--dashboard-bg-light);
-  --text-color: var(--text-color-light);
-  --card-border: var(--card-border-light);
-}
-
-.App.dark {
-  --dashboard-bg: var(--dashboard-bg-dark);
-  --text-color: var(--text-color-dark);
-  --card-border: var(--card-border-dark);
+  flex-direction: column;
+  align-items: center; /* Center align content horizontally */
+  justify-content: flex-start; /* Align content to the top */
+  padding: 20px; /* Optional padding */
 }

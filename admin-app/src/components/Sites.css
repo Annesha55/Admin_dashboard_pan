@@ -1,79 +1,26 @@
-/* Sites.css */
-.sites {
-  padding: 20px;
-}
-
-.sites h2 {
-  margin-bottom: 20px;
-}
-
 .sites-table {
-  width: 100%;
+  width: 100%; /* This makes the table take up 100% of its container's width */
+  max-width: 100%; /* Ensures the table does not exceed the width of its container */
   border-collapse: collapse;
   margin-top: 20px;
+  table-layout: fixed; /* Forces the table to use the specified width */
 }
 
+/* Adjusting td and th styles for better readability */
 .sites-table th,
 .sites-table td {
-  padding: 10px;
+  padding: 12px; /* Increased padding for better spacing */
   text-align: left;
 }
 
-.sites-table th {
-  background-color: #f0f0f0;
-  color: #333;
-}
-
-.sites-table tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-.sites-table tbody tr:hover {
-  background-color: #ddd;
-}
-
-/* Dark mode styles */
-.dark .sites-table {
-  color: #fff;
-}
-
+/* Dark mode adjustments */
+.dark .sites-table td,
 .dark .sites-table th {
-  background-color: #333;
-  color: #fff;
+  border: 1px solid #333; /* Dark mode border color */
 }
 
-.dark .sites-table td {
-  background-color: #444;
-  border: 1px solid #444;
-}
-
-.dark .sites-table tbody tr:nth-child(even) {
-  background-color: #555;
-}
-
-.dark .sites-table tbody tr:hover {
-  background-color: #666;
-}
-
-/* Light mode styles */
-.light .sites-table {
-  color: #000;
-}
-
+/* Light mode adjustments */
+.light .sites-table td,
 .light .sites-table th {
-  background-color: #f0f0f0;
-  color: #333;
-}
-
-.light .sites-table td {
-  background-color: #fff;
-  border: 1px solid #ddd;
-}
-
-.light .sites-table tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-.light .sites-table tbody tr:hover {
-  background-color: #ddd;
+  border: 1px solid #ddd; /* Light mode border color */
 }

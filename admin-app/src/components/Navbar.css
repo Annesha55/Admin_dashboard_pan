@@ -1,31 +1,21 @@
-/* Navbar.css */
+/* Base styles */
 .navbar {
   display: flex;
   justify-content: space-between;
-  align-items: right;
-  padding: 20px 100%;
-  height: 20px;
-  background-color: #fff;
-  color: #333;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.navbar.dark {
-  background-color: #333;
-  color: #fff;
-}
-
-.navbar.light {
-  background-color: #fff;
-  color: #333;
+  align-items: center;
+  padding: 20px; /* Reduced padding */
+  width: 100%; /* Set width to 100% of the page */
+  height: 60px; /* Set height to a fixed value */
+  background-color: #ffffff;
+  color: #333333;
+  box-shadow: 0 2px 4px rgba(2, 76, 31, 0.1);
 }
 
 .navbar-content {
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 100%; /* Set width to 100% of the page */
 }
-
 
 .sidebar-toggle-button {
   background: none;
@@ -33,17 +23,12 @@
   color: inherit;
   cursor: pointer;
   font-size: 1.5rem;
-  position: absolute;
-  left: 10px; 
-  
+  margin-right: 20px; /* Added margin to create space */
 }
 
 .logo {
   flex-grow: 1;
   text-align: center;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .logo h1 {
@@ -60,8 +45,55 @@
   border: none;
   color: inherit;
   cursor: pointer;
-  margin-right: 10;
+  margin-left: 20px; /* Added margin to create space */
   font-size: 1.5rem;
-  position: absolute;
-  right:10px
+}
+
+/* Dark mode styles */
+.dark-mode .navbar {
+  background-color: #004d00; /* Dark green background */
+  color: #ffffff; /* White text */
+}
+
+.dark-mode .sidebar-toggle-button,
+.dark-mode .dark-mode-toggle {
+  color: #ffffff; /* White text for buttons */
+}
+
+/* Light mode styles */
+.light-mode .navbar {
+  background-color: #00ff00; /* Light green background */
+  color: #333333; /* Dark text */
+}
+
+.light-mode .sidebar-toggle-button,
+.light-mode .dark-mode-toggle {
+  color: #333333; /* Dark text for buttons */
+}
+
+/* Table styles */
+.sites-table {
+  width: 100%; /* This makes the table take up 100% of its container's width */
+  max-width: 100%; /* Ensures the table does not exceed the width of its container */
+  border-collapse: collapse;
+  margin-top: 20px;
+  table-layout: fixed; /* Forces the table to use the specified width */
+}
+
+.sites-table th,
+.sites-table td {
+  padding: 12px; /* Increased padding for better spacing */
+  text-align: left;
+}
+
+/* Dark mode adjustments for table */
+.dark-mode .sites-table td,
+.dark-mode .sites-table th {
+  border: 1px solid #004d00; /* Dark green border color for dark mode */
+}
+
+/* Light mode adjustments for table */
+.light-mode .sites-table td,
+.light-mode .sites-table th {
+  border: 1px solid #ddd; /* Light mode border color */
 }
