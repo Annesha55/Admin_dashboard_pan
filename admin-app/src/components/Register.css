@@ -1,64 +1,122 @@
+.container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  height: 80vh;
+  width: 80%;
+}
 
+.left-half {
+  width: 50%;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-half img {
+  width: 100%;       /* Adjust width to fit the container */
+  height: 100%;      /* Adjust height to fit the container */
+  object-fit: cover; /* Cover the entire container area */
+}
+
+/* Additional style for dark mode */
+.left-half.dark-mode {
+  background-color: #333;
+}
+
+.left-half.dark-mode img {
+  filter: brightness(0.75); /* Adjust brightness for dark mode */
+}
+
+.right-half {
+  width: 50%;
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .register-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    
-  }
-  
-  .register-form {
-    /* Transparent background */
-    background-color: transparent;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
-    width: 300px;
-  }
-  
-  .register-form h2 {
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .input-group {
-    margin-bottom: 20px;
-  }
-  
-  .input-group label {
-    display: block;
-    margin-bottom: 8px;
-  }
-  
-  .input-group input {
-    width: calc(100% - 16px);
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  button[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    color: #ffffff;
-    background-color: #28a745; /* Green submit button */
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
+  max-width: 350px;
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
 
-  .login-link {
-    color: #007bff; /* Blue color for the link */
-    cursor: pointer;
-    text-decoration: underline;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #218838; /* Darker green on hover */
-  }
-  
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--primary-text-color);
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--secondary-text-color);
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: var(--primary-text-color);
+}
+
+.register-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #0b430a;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.register-button:hover {
+  background-color: #1e8e0e;
+}
+
+.login-prompt {
+  text-align: center;
+  margin-top: 15px;
+  color: var(--secondary-text-color);
+}
+
+.login-link {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.login-link:hover {
+  color: darkblue;
+}
+
+.animate {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  10% { transform: translateX(-10px); }
+  20% { transform: translateX(10px); }
+  30% { transform: translateX(-10px); }
+  40% { transform: translateX(10px); }
+  50% { transform: translateX(-10px); }
+  60% { transform: translateX(10px); }
+  70% { transform: translateX(-10px); }
+  80% { transform: translateX(10px); }
+  90% { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
+}

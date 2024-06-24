@@ -1,31 +1,67 @@
-.login-container {
+.container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  height: 80vh;
+  width: 80%;
+}
+
+.left-half {
+  width: 50%;
+  background-color: #f0f0f0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Full viewport height */
 }
 
-.login-box {
-  max-width: 400px;
+.left-half img {
+  width: 100%;       /* Adjust width to fit the container */
+  height: 100%;      /* Adjust height to fit the container */
+  object-fit: cover; /* Cover the entire container area */
+  
+}
+
+.right-half {
+  width: 50%;
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  max-width: 350px;
   width: 100%;
   padding: 20px;
-  background-color: var(--container-bg);
+  background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary-text-color);
 }
 
 h2 {
   text-align: center;
   margin-bottom: 20px;
+  color: var(--primary-text-color);
 }
 
-.form-group {
+.input-group {
   margin-bottom: 15px;
 }
 
 label {
   display: block;
   margin-bottom: 5px;
+  color: var(--secondary-text-color);
 }
 
 input {
@@ -33,12 +69,13 @@ input {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  color: var(--primary-text-color);
 }
 
 .login-button {
   width: 100%;
   padding: 10px;
-  background-color:#0b430a; ; /* Green color */
+  background-color: #0b430a;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -47,12 +84,13 @@ input {
 }
 
 .login-button:hover {
-  background-color: #1e8e0e; /* Darker green for hover state */
+  background-color: #1e8e0e;
 }
 
 .register-prompt {
   text-align: center;
   margin-top: 15px;
+  color: var(--secondary-text-color);
 }
 
 .register-link {
@@ -65,30 +103,20 @@ input {
   color: darkblue;
 }
 
-/* Dark mode */
-.App.dark .login-box {
-  background-color: #333;
-  color: #fff;
+.animate {
+  animation: shake 0.5s ease-in-out;
 }
 
-.App.dark input {
-  background-color: #555;
-  color: #fff;
-  border: 1px solid #777;
-}
-
-.App.dark .login-button {
-  background-color: #167f0d; /* Green color */
-}
-
-.App.dark .login-button:hover {
-  background-color: #1e8e0e; /* Darker green for hover state */
-}
-
-.App.dark .register-link {
-  color: #00aaff;
-}
-
-.App.dark .register-link:hover {
-  color: #0088cc;
+@keyframes shake {
+  0% { transform: translateX(0); }
+  10% { transform: translateX(-10px); }
+  20% { transform: translateX(10px); }
+  30% { transform: translateX(-10px); }
+  40% { transform: translateX(10px); }
+  50% { transform: translateX(-10px); }
+  60% { transform: translateX(10px); }
+  70% { transform: translateX(-10px); }
+  80% { transform: translateX(10px); }
+  90% { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
 }

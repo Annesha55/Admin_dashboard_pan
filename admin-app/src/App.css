@@ -1,45 +1,46 @@
 .App {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  height: 100vh; 
-  width: 100vw;  
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  overflow: hidden;
-  background-image: linear-gradient(to bottom, #021304, #f1faef); /* Default gradient */
-}
-
-/* Light mode background */
-.App.light {
-  background-image: linear-gradient(to bottom, #bdecb6, #ffffff); /* Light green gradient */
-  color: var(--text-color-light);
-}
-
-/* Dark mode background */
-.App.dark {
-  background-image: linear-gradient(to bottom, #0f2f0e, #021304); /* Dark green gradient */
-  color: var(--text-color-dark);
-}
-
-/* Specify light mode text color */
-.App.light {
-  --text-color: var(--text-color-light);
-}
-
-/* Specify dark mode text color */
-.App.dark {
-  --text-color: var(--text-color-dark);
-}
-
-.content {
-  flex: 1;
-  width: 100%; /* Ensure the content takes full width */
-  max-width: 1200px; /* Optional max-width */
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center align content horizontally */
-  justify-content: flex-start; /* Align content to the top */
-  padding: 20px; /* Optional padding */
-}
+    font-family: Arial, sans-serif;
+    text-align: center;
+    height: 100vh; 
+    width: 100vw;  
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, #021304, #f1faef); /* Default gradient */
+  }
+  
+  /* Light mode background */
+  .App.light {
+    background-image: linear-gradient(to bottom, #bdecb6, #ffffff); /* Light green gradient */
+    color: var(--text-color-light);
+  }
+  
+  /* Dark mode background */
+  .App.dark {
+    background-image: linear-gradient(to bottom, #0f2f0e, #021304); /* Dark green gradient */
+    color: var(--text-color-dark);
+  }
+  
+  /* Specify light mode text color */
+  .App.light {
+    --text-color: var(--text-color-light);
+  }
+  
+  /* Specify dark mode text color */
+  .App.dark {
+    --text-color: var(--text-color-dark);
+  }
+  
+  .content {
+    flex: 1;
+    width: 100%; /* Ensure the content takes full width */
+    max-width: 1200px; /* Optional max-width */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align content horizontally */
+    justify-content: flex-start; /* Align content to the top */
+    padding: 20px; /* Optional padding */
+  }
+  

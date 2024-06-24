@@ -1,7 +1,7 @@
-// Settings.js
+
 
 import React from 'react';
-import './Settings.css'; // Import your CSS file for styling
+import './Settings.css'; 
 
 const Settings = ({ darkMode }) => {
   // Sample user data
@@ -13,12 +13,11 @@ const Settings = ({ darkMode }) => {
   ];
 
   const handleToggleActive = (userId) => {
-    // Update user's active status in the list
+   
     const updatedUsers = users.map(user =>
       user.id === userId ? { ...user, active: !user.active } : user
     );
-    // Replace users with updated list (or update in API/backend)
-    // For demo purposes, just logging the updated users
+  
     console.log(updatedUsers);
   };
 

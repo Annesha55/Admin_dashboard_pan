@@ -1,26 +1,63 @@
-.sites-table {
-  width: 100%; /* This makes the table take up 100% of its container's width */
-  max-width: 100%; /* Ensures the table does not exceed the width of its container */
-  border-collapse: collapse;
-  margin-top: 20px;
-  table-layout: fixed; /* Forces the table to use the specified width */
-}
 
-/* Adjusting td and th styles for better readability */
-.sites-table th,
-.sites-table td {
-  padding: 12px; /* Increased padding for better spacing */
-  text-align: left;
-}
 
-/* Dark mode adjustments */
-.dark .sites-table td,
-.dark .sites-table th {
-  border: 1px solid #333; /* Dark mode border color */
-}
-
-/* Light mode adjustments */
-.light .sites-table td,
-.light .sites-table th {
-  border: 1px solid #ddd; /* Light mode border color */
-}
+.sites {
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .sites.light {
+    background-color: #f9f9f900;
+    color: #333;
+  }
+  
+  .sites.dark {
+    background-color: #33333300;
+    color: #f9f9f9;
+  }
+  
+  .sites h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .sites-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .sites-table th,
+  .sites-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .sites-table th {
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  .sites.dark .sites-table th {
+    background-color: #555;
+    color: #f9f9f9;
+  }
+  
+  .sites-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .sites.dark .sites-table tr:nth-child(even) {
+    background-color: #444;
+  }
+  
+  .sites-table tr:hover {
+    background-color: #ddd;
+  }
+  
+  .sites.dark .sites-table tr:hover {
+    background-color: #666;
+  }
+  
